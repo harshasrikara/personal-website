@@ -5,6 +5,10 @@ const IconLogo = () => (
     <title>Logo</title>
     <g transform="translate(-8.000000, -2.000000)">
       <g transform="translate(11.000000, 5.000000)">
+        <path
+          d="M26.5,23 L26.5,63 L31.5,63 L31.5,23 Z M46.5,23 L46.5,63 L51.5,63 L51.5,23 Z M31.5,40.5 L46.5,40.5 L46.5,45.5 L31.5,45.5 Z"
+          fill="currentColor"
+        />
         <polygon
           id="Shape"
           stroke="currentColor"
@@ -20,6 +24,7 @@ const IconLogo = () => (
       </g>
     </g>
   </svg>
+  // <img src="https://www.acmutd.co/brand/Development/Logos/light_dark_background.png"/>
 );
 
 export default IconLogo;
