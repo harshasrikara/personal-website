@@ -3,7 +3,7 @@ date: '2017-01-01'
 title: 'Director of Development'
 company: 'ACM'
 location: 'University of Texas at Dallas'
-range: 'April 2020 - Present'
+range: 'April 2020 - April 2021'
 url: 'https://acmutd.co/'
 ---
 
