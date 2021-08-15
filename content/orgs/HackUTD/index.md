@@ -10,4 +10,4 @@ url: 'https://hackutd.co/'
 - Organized the flagship hackathon of North Texas with 700+ attendees
 - Manage a group of technical developers to design and create cross-platform marketing and technical solutions for problems faced by organizers
 - Implemented a new digital platform that allows us to handle hacker applications, perform event management and efficiently communicate with students
-- Supervised the growth of our overall tech stack and handled team/project management
+- Supervised the growth of our overall tech stack and handled team/project management while aligning development timelines with the greater organization schedule

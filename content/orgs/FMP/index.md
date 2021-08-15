@@ -3,7 +3,7 @@ date: '2014-01-01'
 title: 'Student Leader'
 company: 'FMP'
 location: 'University of Texas at Dallas'
-range: 'May 2019 - Present'
+range: 'May 2019 - June 2021'
 url: 'https://oue.utdallas.edu/special-programs/freshman-mentor-program'
 ---
 
