@@ -64,7 +64,7 @@ const Hero = () => {
   const three = <h3 className="big-heading">Hacker. Developer. Innovator.</h3>;
   const four = (
     <p>
-      I'm a Computer Science major at the University of Texas at Dallas, SDE Intern at Amazon and
+      I'm a Computer Science major at the University of Texas at Dallas, Incoming SDE at Amazon and
       Strategic Advisor for UT Dallas chapter of the Association for Computing Machinery.
     </p>
   );
