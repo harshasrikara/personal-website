@@ -1,5 +1,5 @@
 ---
-date: '2021-01-01'
+date: '2021-08-01'
 title: 'Leadership'
 github: 'https://github.com/acmutd/Leadership'
 external: 'https://leadership.acmutd.co/'

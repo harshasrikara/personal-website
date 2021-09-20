@@ -1,6 +1,6 @@
 ---
 date: '2021-02-27'
-title: 'HarshaHacks'
+title: 'Personal Website'
 github: 'https://github.com/harshasrikara/personal-website'
 external: 'https://harshasrikara.dev'
 tech:
