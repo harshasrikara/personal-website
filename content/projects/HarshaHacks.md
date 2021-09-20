@@ -6,7 +6,7 @@ external: 'https://harshahacks.dev/'
 tech:
   - HTML/CSS
   - OAuth
-  - JaavaScript
+  - JavaScript
 showInProjects: true
 ---
 
