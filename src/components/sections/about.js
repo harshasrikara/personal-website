@@ -125,7 +125,16 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['TypeScript', 'Firebase', 'React', 'Python', 'Node.js', 'Kubernetes'];
+  const skills = [
+    'TypeScript',
+    'Firebase',
+    'NextJS',
+    'Python',
+    'Node.js',
+    'Lambda',
+    'AWS',
+    'GraphQL',
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -137,11 +146,11 @@ const About = () => {
             <p>Hello! I'm Harsha, nice to meet you!</p>
 
             <p>
-              I am an undergraduate student at the University of Texas at Dallas currently double
-              majoring in Computer Science and Mathematics. My interests primarily lie in the
-              confluence of software engineering and statistical analysis. This has led me to build
-              a strong background in the conceptual underpinnings of important fields such as Data
-              Science, Artificial Intelligence, Information Retrieval and Machine Learning.
+              I am an undergraduate student at the University of Texas at Dallas currently pursuing
+              a major in Computer Science. My interests include diving into the software design
+              process, data pipeline archcitecture, security analysis and vulnerability mitigation.
+              To pursue this, I've developed a strong background in system design, data-driven
+              process flow, cloud-first architectural patterns, and modern security practices.
             </p>
 
             <p>

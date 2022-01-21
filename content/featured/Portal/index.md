@@ -3,7 +3,7 @@ date: '3'
 title: 'Member Portal'
 cover: './acmutd.png'
 github: 'https://github.com/acmutd/portal'
-external: 'https://app.acmutd.co'
+external: 'https://portal.acmutd.co'
 tech:
   - React
   - TypeScript
