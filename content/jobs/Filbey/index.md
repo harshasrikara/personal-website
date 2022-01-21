@@ -1,6 +1,6 @@
 ---
 date: '2019-01-01'
-title: 'Neuroanalytics Intern'
+title: 'Research Intern'
 company: 'Filbey Lab'
 location: 'Center for Brain Health'
 range: 'January 2019 - June 2019'

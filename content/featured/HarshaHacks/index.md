@@ -1,5 +1,5 @@
 ---
-date: '1'
+date: '2'
 title: 'HarshaHacks'
 cover: './harshahacks.png'
 github: 'https://github.com/harshasrikara/harshahacks'
