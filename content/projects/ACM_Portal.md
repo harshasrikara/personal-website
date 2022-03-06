@@ -2,7 +2,7 @@
 date: '2021-01-01'
 title: 'Member Portal'
 github: 'https://github.com/acmutd/portal'
-external: 'https://app.acmutd.co'
+external: 'https://portal.acmutd.co'
 tech:
   - React
   - TypeScript
