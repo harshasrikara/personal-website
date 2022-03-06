@@ -3,7 +3,7 @@ date: '2021-01-01'
 title: 'Student Leader'
 company: 'Postman'
 location: 'Remote'
-range: 'March 2021 - Present'
+range: 'March 2021 - March 2022'
 url: 'https://postman.com/'
 ---
 

@@ -6,7 +6,7 @@ external: ''
 tech:
   - Python
 company: ''
-showInProjects: true
+showInProjects: false
 ---
 
-Advent of Code solutions for 2020
+Advent of Code solutions for 2020 & 2021

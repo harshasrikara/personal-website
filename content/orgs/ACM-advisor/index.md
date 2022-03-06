@@ -4,7 +4,7 @@ title: 'Strategic Advisor'
 company: 'ACM x HackUTD'
 location: 'University of Texas at Dallas'
 range: 'April 2021 - Present'
-url: 'https://acmutd.co/'
+url: 'https://leadership.acmutd.co/'
 ---
 
 - Advising the various teams across the organization to support & mentor officers success
