@@ -108,8 +108,7 @@ const Footer = () => {
         <Fragment>
           <Fragment>
             Content by
-            <a href="https://github.com/harshasrikara/personal-website">Harsha Srikara</a>&amp;
-            Design by
+            <a href="https://github.com/harshasrikara">Harsha Srikara</a>&amp; Design by
             <a href="https://brittanychiang.com">Brittany Chiang</a>
           </Fragment>
 

@@ -146,11 +146,12 @@ const About = () => {
             <p>Hello! I'm Harsha, nice to meet you!</p>
 
             <p>
-              I am an undergraduate student at the University of Texas at Dallas currently pursuing
-              a major in Computer Science. My interests include diving into the software design
-              process, data pipeline archcitecture, security analysis and vulnerability mitigation.
-              To pursue this, I've developed a strong background in system design, data-driven
-              process flow, cloud-first architectural patterns, and modern security practices.
+              I am an incoming SDE at Amazon based out of Austin, TX. I hold a Bachelor's in
+              Computer Science degree & Certificate in Information Assurance from the University of
+              Texas at Dallas. My interests include diving into the software design process, data
+              pipeline archcitecture, security analysis and vulnerability mitigation. To pursue
+              this, I've developed a strong background in system design, data-driven process flow,
+              cloud-first architectural patterns, and modern security practices.
             </p>
 
             <p>

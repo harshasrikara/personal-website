@@ -3,7 +3,7 @@ date: '2022-01-01'
 title: 'Developer & Technical Advisor'
 company: 'AIS'
 location: 'University of Texas at Dallas'
-range: 'September 2021 - Current'
+range: 'September 2021 - April 2022'
 url: 'https://aisutd.org/'
 ---
 

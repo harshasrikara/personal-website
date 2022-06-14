@@ -1,9 +1,9 @@
 ---
-date: '2021-01-01'
+date: '2022-02-01'
 title: 'Strategic Advisor'
 company: 'ACM x HackUTD'
 location: 'University of Texas at Dallas'
-range: 'April 2021 - Present'
+range: 'April 2021 - June 2022'
 url: 'https://leadership.acmutd.co/'
 ---
 
