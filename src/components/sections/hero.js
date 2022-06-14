@@ -51,10 +51,7 @@ const Hero = () => {
   const two = <h2 className="big-heading">Harsha Srikara.</h2>;
   const three = <h3 className="big-heading">Hacker. Developer. Innovator.</h3>;
   const four = (
-    <p>
-      I'm a Computer Science major at the University of Texas at Dallas, Incoming SDE at Amazon and
-      Strategic Advisor for UT Dallas chapter of the Association for Computing Machinery.
-    </p>
+    <p>I'm an incoming Software Development Engineer at Amazon based out of Austin, TX.</p>
   );
   const five = (
     <a href={`mailto:${email}`} className="email-link">

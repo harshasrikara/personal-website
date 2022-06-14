@@ -3,7 +3,7 @@ date: '2015-01-01'
 title: 'Campus Ambassador'
 company: 'nwPlus'
 location: 'University of British Columbia'
-range: 'August 2020 - Present'
+range: 'August 2020 - August 2021'
 url: 'https://www.nwplus.io'
 ---
 
