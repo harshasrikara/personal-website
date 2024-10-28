@@ -3,7 +3,7 @@ date: '2021-01-01'
 title: 'Software Developer'
 company: 'Reveal'
 location: 'Dallas, TX'
-range: 'Jan 2021 - Present'
+range: 'Jan 2021 - May 2021'
 url: 'https://www.revealdata.com/'
 ---
 
