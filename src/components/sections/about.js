@@ -154,15 +154,6 @@ const About = () => {
               architectural patterns, and modern security practices.
             </p>
 
-            <p>
-              I also recently{' '}
-              <a href="https://www.newline.co/courses/build-a-spotify-connected-app">
-                launched a course
-              </a>{' '}
-              that covers everything you need to build a web app with the Spotify API using Node
-              &amp; React.
-            </p>
-
             <p>Here are a few technologies I’ve been working with recently:</p>
           </div>
 
