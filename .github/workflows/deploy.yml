@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Specify Node Version
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
       - name: Checkout
         uses: actions/checkout@v2
 
