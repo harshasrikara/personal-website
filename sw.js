@@ -27,36 +27,38 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-47c1c2d6323ce5b996c6.js"
+    "url": "webpack-runtime-7419f29c8ad0d7de80a6.js"
   },
   {
-    "url": "framework-3321703c33570853116c.js"
+    "url": "framework-767ca90210d972f830c1.js"
   },
   {
-    "url": "app-8e7e8559f7bdccaa0f8d.js"
+    "url": "app-1f5f615a66b01e1d2fe0.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "584b91fbe1afd4d8323772bd8c6244c8"
+    "revision": "0b692e61492b7c036119fb072a82100b"
   },
   {
-    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-b1462017a2c34a95e2b4.js"
+    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-e4a6ddf4ad6cbda8146b.js"
+  },
+  {
+    "url": "polyfill-25d5b119aaccec0ce083.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "e74278bb7080156ff332b883400635db"
+    "revision": "cd7ec0bd601302926ebe3bc5696259b2"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerRoute(/(\.js$|\.css$|static\/)/, new workbox.strategies.CacheFirst(), 'GET');
-workbox.routing.registerRoute(/^https?:.*\page-data\/.*\/page-data\.json/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
-workbox.routing.registerRoute(/^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
+workbox.routing.registerRoute(/^https?:.*\/page-data\/.*\.json/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
+workbox.routing.registerRoute(/^https?:.*\.(png|jpg|jpeg|webp|avif|svg|gif|tiff|js|woff|woff2|json|css)$/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
 workbox.routing.registerRoute(/^https?:\/\/fonts\.googleapis\.com\/css/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
 
 /* global importScripts, workbox, idbKeyval */
-
-importScripts(`idb-keyval-iife.min.js`)
+importScripts(`idb-keyval-3.2.0-iife.min.js`)
 
 const { NavigationRoute } = workbox.routing
 
@@ -137,7 +139,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-8e7e8559f7bdccaa0f8d.js`))) {
+  if (!resources || !(await caches.match(`/app-1f5f615a66b01e1d2fe0.js`))) {
     return await fetch(event.request)
   }
 
