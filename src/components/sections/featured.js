@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, Fragment } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import sr from '@utils/sr';
 import { srConfig } from '@config';
 import { Icon } from '@components/icons';
+import { usePrefersReducedMotion } from '@hooks';
 
 const StyledProjectsGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
@@ -21,6 +22,10 @@ const StyledProject = styled.li`
   grid-gap: 10px;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
+
+  @media (max-width: 768px) {
+    ${({ theme }) => theme.mixins.boxShadow};
+  }
 
   &:not(:last-of-type) {
     margin-bottom: 100px;
@@ -45,6 +50,7 @@ const StyledProject = styled.li`
       @media (max-width: 768px) {
         grid-column: 1 / -1;
         padding: 40px 40px 30px;
+        text-align: left;
       }
       @media (max-width: 480px) {
         padding: 25px 25px 20px;
@@ -53,11 +59,15 @@ const StyledProject = styled.li`
     .project-tech-list {
       justify-content: flex-end;
 
+      @media (max-width: 768px) {
+        justify-content: flex-start;
+      }
+
       li {
         margin: 0 0 5px 20px;
 
         @media (max-width: 768px) {
-          margin: 0 0 5px 10px;
+          margin: 0 10px 5px 0;
         }
       }
     }
@@ -65,6 +75,12 @@ const StyledProject = styled.li`
       justify-content: flex-end;
       margin-left: 0;
       margin-right: -10px;
+
+      @media (max-width: 768px) {
+        justify-content: flex-start;
+        margin-left: -10px;
+        margin-right: 0;
+      }
     }
     .project-image {
       grid-column: 1 / 8;
@@ -158,6 +174,11 @@ const StyledProject = styled.li`
     a {
       ${({ theme }) => theme.mixins.inlineLink};
     }
+
+    strong {
+      color: var(--white);
+      font-weight: normal;
+    }
   }
 
   .project-tech-list {
@@ -212,6 +233,11 @@ const StyledProject = styled.li`
         height: 20px;
       }
     }
+
+    .cta {
+      ${({ theme }) => theme.mixins.smallButton};
+      margin: 10px;
+    }
   }
 
   .project-image {
@@ -229,6 +255,7 @@ const StyledProject = styled.li`
 
     a {
       width: 100%;
+      height: 100%;
       background-color: var(--green);
       border-radius: var(--border-radius);
       vertical-align: middle;
@@ -270,7 +297,7 @@ const StyledProject = styled.li`
         object-fit: cover;
         width: auto;
         height: 100%;
-        filter: grayscale(100%) contrast(1) brightness(80%);
+        filter: grayscale(100%) contrast(1) brightness(50%);
       }
     }
   }
@@ -278,10 +305,10 @@ const StyledProject = styled.li`
 
 const Featured = () => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       featured: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/featured/" } }
-        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { fileAbsolutePath: { regex: "/content/featured/" } }
+        sort: { fields: [frontmatter___date], order: ASC }
       ) {
         edges {
           node {
@@ -289,9 +316,7 @@ const Featured = () => {
               title
               cover {
                 childImageSharp {
-                  fluid(maxWidth: 700, traceSVG: { color: "#64ffda" }) {
-                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                  }
+                  gatsbyImageData(width: 700, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
                 }
               }
               tech
@@ -306,10 +331,15 @@ const Featured = () => {
   `);
 
   const featuredProjects = data.featured.edges.filter(({ node }) => node);
-
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);
+  const prefersReducedMotion = usePrefersReducedMotion();
+
   useEffect(() => {
+    if (prefersReducedMotion) {
+      return;
+    }
+
     sr.reveal(revealTitle.current, srConfig());
     revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
   }, []);
@@ -324,7 +354,8 @@ const Featured = () => {
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover } = frontmatter;
+            const { external, title, tech, github, cover, cta } = frontmatter;
+            const image = getImage(cover);
 
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
@@ -350,12 +381,17 @@ const Featured = () => {
                     )}
 
                     <div className="project-links">
+                      {cta && (
+                        <a href={cta} aria-label="Course Link" className="cta">
+                          Learn More
+                        </a>
+                      )}
                       {github && (
                         <a href={github} aria-label="GitHub Link">
                           <Icon name="GitHub" />
                         </a>
                       )}
-                      {external && (
+                      {external && !cta && (
                         <a href={external} aria-label="External Link" className="external">
                           <Icon name="External" />
                         </a>
@@ -366,7 +402,7 @@ const Featured = () => {
 
                 <div className="project-image">
                   <a href={external ? external : github ? github : '#'}>
-                    <Img fluid={cover.childImageSharp.fluid} alt={title} className="img" />
+                    <GatsbyImage image={image} alt={title} className="img" />
                   </a>
                 </div>
               </StyledProject>
